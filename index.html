@@ -42,10 +42,11 @@
     .maroon {color: maroon;} 
 --></style>
 	<body data-gr-c-s-loaded="true">
-<h1 style="text-align: left;"><span style="color: #ffcc00;"><strong>Resource Hooker &copy;</strong></span></h1>
+<h1 style="text-align: center;"><span style="color: #ffcc00;"><strong>Resource Hooker &copy;</strong></span></h1>
 <h2>version 1.0</h2>
 <p><span style="font-size: large;">Copyright @2017 KP</span></p>
 <p><span style="font-size: medium; color: #000000;">Associated With Plexdata &amp; KP'S TV</span></p>
+<p><span style="font-size: medium; color: #000000;"><a href="https://kaustubhpatange.github.io/Resource-Hooker/#download">Download</a></span></p>
 <p><strong>&nbsp;</strong></p>
 <h2>About:</h2>
 <p>&nbsp;</p>
@@ -56,7 +57,7 @@
 <p><span style="font-size: medium;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/KaustubhPatange/Resource-Hooker/raw/master/Images/r1.PNG" alt="" /></span></p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;">&nbsp;</p>
-<h2 style="text-align: left;">Installation:</h2>
+<h2 style="text-align: center;">Installation:</h2>
 <p><span style="font-size: medium;">Rather Than talking about using it, its installation is pretty much different, means not likely whole different but most of it is same. So Note that, you must Follow the same instructions as written below otherwise the software will work for only 60 days after normal installation.</span></p>
 <p><span style="font-size: medium;">1. Download the installer or a zipped package&nbsp;from the link given below.</span></p>
 <p><span style="font-size: medium;">2. Then Install it in a normal way as we likely do. For zipped package extract it anywhere you find suitable.</span></p>
@@ -76,6 +77,28 @@
 <p><span style="font-size: medium;">Now this is very easy stuff once you have dragged or browsed your resource you can then select Add/Change and then do your stuff willingly as you want. Also you can use Hooks strip to edit strings, replace/inject icon, edit assembly and all.</span></p>
 <p><span style="font-size: medium;"><strong><em>Backing Up File:</em></strong></span></p>
 <p><span style="font-size: medium;">Note all your mods will be applied to original resource, so make sure you had taken a backup of that application from View &gt; Backup or Target the backup application for resource Hooking.</span></p>
+<p><span style="font-size: medium;"><strong><em>Add Resource:</em></strong></span></p>
+<p><span style="font-size: medium;"><strong><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/KaustubhPatange/Resource-Hooker/raw/master/Images/r3.png" alt="" width="850" height="537" /></em></strong></span></p>
+<p><span style="font-size: medium;">Adding Resource is an easy job, only if you understand some parameter.&nbsp;Basically I have made a guide for beginners embed in my docs of github&nbsp;profile or access it from Help &gt; Topics or F1. As we know path of resource is x\x\x where x is an integer, same like that 24\1\0 represents Manifest while 14\"MainIcon"\0 represent Icon of the exe. Here 14 is the Resource Type, "MainIcon" is the Resource name (it may be int or string), 0 is the Lang_id i.e Resource Compiled language (like 0 is neutral language, 1033 is US English). Once your Info done you can click OK.</span></p>
+<p><span style="font-size: medium;"><strong><em>Replace Resource:</em></strong></span></p>
+<p><span style="font-size: medium;"><strong><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/KaustubhPatange/Resource-Hooker/raw/master/Images/r4.png" alt="" width="850" height="537" /></em></strong></span></p>
+<p><span style="font-size: medium;">Replace Resource also goes like the above one, you must specify the resource path i.e x\x\x and then Browse a proper replacement resource, then Okay.</span></p>	
+<p><span style="font-size: medium;"><strong><em>Edit Manifest:</em></strong></span></p>
+<p><span style="font-size: medium;"><strong><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/KaustubhPatange/Resource-Hooker/raw/master/Images/r5.png" alt="" width="850" height="537" /></em></strong></span></p>
+<p><span style="font-size: medium;">Editing Manifest is an easy task, just select Edit &gt; Manifest Editor.Now manifest editing includes not much task as of I know, to do a stuff you can change Execution level, i.e you can set admin rights or normal to an exe. To do so edit the resource</span></p>
+<pre><code>requestedExecutionLevel level="asInvoker"</code></pre> <p><span style="font-size: medium;">to <pre><code>requestedExecutionLevel level="requireAdministrator"</code></pre> Now Compile it and you see that the exe compiled has admin right execution permission.</span></p>	
+<p><span style="font-size: medium;"><strong><em>Editing String Table:</em></strong></span></p>
+<p><span style="font-size: medium;"><strong><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/KaustubhPatange/Resource-Hooker/raw/master/Images/r6.png" alt="" width="850" height="537" /></em></strong></span></p>
+<p><span style="font-size: medium;">String is the Message or you can same all text wrapped in a file, so that whenever exe want it can call it (Its like our strings.xml in apk). Now to call it would be a difficult job coz there are lot of strings so for that a specific String ID is given to each Message or string. So exe access the specific string by calling that String ID. Now in the above pic you can see, that there is a string table where string id 65440 has value Thu, 65441 has value Fri, and so on. Now to change it, use Edit String Tool in Hooks &gt; Edit Strings. A box will be displayed as shown. Here Enter the string ID in first box as I did 65442 (which has value Sat), Now in the comment box below it enter the value to be replaced as I did. Now click on Add button. You will see I have previously added some strings. So you can do it till infinite once you done, click Apply and all strings will be replaced.<img src="https://html-online.com/editor/tinymce/plugins/emoticons/img/smiley-laughing.gif" alt="laughing" /></span></p>
 <p>&nbsp;</p>
+<p><span style="font-size: medium;">Actually There is many thing, you can do with my Tool also not very much but atleast you understand what an exe modding is basically. So now you can go for advance tool like for dialog editing soon I will integrate that too in my Software, till then use Resource Hacker or Resource Tuner. Also If you have any doubts in my Tool or want to report bugs contact me from my Main Website given in below links. For now I will see you AGAIN<img src="https://html-online.com/editor/tinymce/plugins/emoticons/img/smiley-cool.gif" alt="cool" /></span></p>		
+<h2>&nbsp; Changelog:</h2>
+<p><span style="font-size: medium;"><span style="font-size: medium;"> version 1.0</span></span></p>
+<ul>
+<li><span style="font-size: medium;">Initial Release</span>&nbsp;</li>
+</ul>	
+<p>&nbsp;</p>
+<a name="download"></a>
+<b>Download</b><br><br>	
 	</body>
 </html>
