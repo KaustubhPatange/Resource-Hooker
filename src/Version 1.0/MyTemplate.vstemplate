@@ -1,0 +1,141 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Resources Hooker</Name>
+    <Description>This program loads and shows the resources of binary files such as EXE and DLL</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Resources Hooker</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="ResourcesViewer.csproj" File="ResourcesViewer.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AboutBox.cs">AboutBox.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AboutBox.designer.cs">AboutBox.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="AboutBox.resx">AboutBox.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="addres.cs">addres.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="addres.Designer.cs">addres.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="addres.resx">addres.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationSettings.cs">ApplicationSettings.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationSettingsDialog.cs">ApplicationSettingsDialog.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationSettingsDialog.Designer.cs">ApplicationSettingsDialog.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationSettingsDialog.resx">ApplicationSettingsDialog.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="assemedit.cs">assemedit.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="assemedit.Designer.cs">assemedit.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="assemedit.resx">assemedit.resx</ProjectItem>
+      <Folder Name="bin" TargetFolderName="bin">
+        <ProjectItem ReplaceParameters="false" TargetFileName="activate.bat">activate.bat</ProjectItem>
+        <Folder Name="Debug" TargetFolderName="Debug">
+          <ProjectItem ReplaceParameters="false" TargetFileName="7z.exe">7z.exe</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="package.7z">package.7z</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ColorButton.cs">ColorButton.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Create.cs">Create.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Create.Designer.cs">Create.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Create.resx">Create.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="editstring.cs">editstring.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="editstring.Designer.cs">editstring.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="editstring.resx">editstring.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="FastColoredTextBox.dll">FastColoredTextBox.dll</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Generic.Serializer.cs">Generic.Serializer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="HexViewer.cs">HexViewer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ImageSplitter.cs">ImageSplitter.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainForm.cs">MainForm.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainForm.Designer.cs">MainForm.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainForm.resx">MainForm.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MainIcon.ico">MainIcon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="repres.cs">repres.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="repres.Designer.cs">repres.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="repres.resx">repres.resx</ProjectItem>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <ProjectItem ReplaceParameters="false" TargetFileName="14575.png">14575.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="145751.png">145751.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="7z.dll">7z.dll</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="7z.exe">7z.exe</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="about.png">about.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="accept.png">accept.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="addic.png">addic.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="addicon.png">addicon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="addn.png">addn.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="addrep.png">addrep.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="admin.png">admin.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="assem.png">assem.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="backup_black_192x192.png">backup_black_192x192.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BinaryNode.png">BinaryNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BitmapNode.png">BitmapNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="bmp.ico">bmp.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="bmp.png">bmp.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="cancel.png">cancel.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="circle-with-i-1.png">circle-with-i-1.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="close.png">close.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="compile.png">compile.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="contacts-xxl.png">contacts-xxl.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="CursorNode.png">CursorNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="defaults.png">defaults.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="delete.png">delete.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="DialogNode.png">DialogNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="dll.png">dll.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="edit.png">edit.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="edit_bitmaps.rts">edit_bitmaps.rts</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="edit_version.rts">edit_version.rts</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="editor.png">editor.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="export.png">export.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="font.png">font.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="html.png">html.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="html1.png">html1.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="HtmlNode.png">HtmlNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="IconNode.png">IconNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="import.bmp">import.bmp</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ini.png">ini.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ini1.png">ini1.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Java.ico">Java.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="java.png">java.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="java1.ico">java1.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="keys.ico">keys.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MainIcon.ico">MainIcon.ico</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MainLogo.png">MainLogo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="manifest.png">manifest.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="MenuNode.png">MenuNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="open-folder.png">open-folder.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="open.png">open.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="options.png">options.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="package.7z">package.7z</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="product.png">product.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="quit.png">quit.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Rcedit-new.exe">Rcedit-new.exe</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="RCEDIT.exe">RCEDIT.exe</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="refresh.png">refresh.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="rep.png">rep.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="repl.png">repl.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="replace.bmp">replace.bmp</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="res.png">res.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="RootNode.png">RootNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="run.png">run.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Save-icon.png">Save-icon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="save.png">save.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="splash.png">splash.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="StringNode.png">StringNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TextNode.png">TextNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TypeNode.png">TypeNode.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="unsave.png">unsave.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="version.png">version.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="VersionNode.png">VersionNode.png</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ResourcesLocator.cs">ResourcesLocator.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ResourceTreeView.cs">ResourceTreeView.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="VersionInfo.cs">VersionInfo.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

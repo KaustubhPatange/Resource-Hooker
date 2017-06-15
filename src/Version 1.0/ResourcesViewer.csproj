@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50E82C90-38A4-4F9D-80EF-EF4658E0AACD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>$safeprojectname$</RootNamespace>
+    <AssemblyName>Resource Hooker</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.16.23.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FastColoredTextBox-master\Binary\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MsgBox">
+      <HintPath>..\..\..\..\..\Libraries\MsgBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addres.Designer.cs">
+      <DependentUpon>addres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="ApplicationSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationSettingsDialog.Designer.cs">
+      <DependentUpon>ApplicationSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assemedit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assemedit.Designer.cs">
+      <DependentUpon>assemedit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create.Designer.cs">
+      <DependentUpon>Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editstring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editstring.Designer.cs">
+      <DependentUpon>editstring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generic.Serializer.cs" />
+    <Compile Include="HexViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageSplitter.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addres.resx">
+      <DependentUpon>addres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationSettingsDialog.resx">
+      <DependentUpon>ApplicationSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assemedit.resx">
+      <DependentUpon>assemedit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editstring.resx">
+      <DependentUpon>editstring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="repres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repres.Designer.cs">
+      <DependentUpon>repres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesLocator.cs" />
+    <Compile Include="ResourceTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="repres.resx">
+      <DependentUpon>repres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\edit_bitmaps.rts" />
+    <EmbeddedResource Include="Resources\edit_version.rts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\activate.bat" />
+    <None Include="bin\Debug\7z.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FastColoredTextBox.dll" />
+    <Content Include="MainIcon.ico" />
+    <None Include="Resources\keys.ico" />
+    <EmbeddedResource Include="Resources\7z.dll" />
+    <EmbeddedResource Include="bin\package.7z" />
+    <None Include="Resources\editor.png" />
+    <EmbeddedResource Include="Resources\package.7z" />
+    <None Include="Resources\repl.png" />
+    <None Include="Resources\addicon.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\MainLogo.png" />
+    <None Include="Resources\contacts-xxl.png" />
+    <None Include="Resources\145751.png" />
+    <None Include="Resources\circle-with-i-1.png" />
+    <None Include="Resources\14575.png" />
+    <None Include="Resources\replace.bmp" />
+    <None Include="Resources\import.bmp" />
+    <None Include="Resources\addrep.png" />
+    <None Include="Resources\unsave.png" />
+    <None Include="Resources\compile.png" />
+    <None Include="Resources\java.png" />
+    <None Include="Resources\java1.ico" />
+    <None Include="Resources\Java.ico" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\bmp.png" />
+    <None Include="Resources\bmp.ico" />
+    <None Include="Resources\BitmapNode.png" />
+    <None Include="Resources\BinaryNode.png" />
+    <None Include="Resources\backup_black_192x192.png" />
+    <None Include="Resources\assem.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\addn.png" />
+    <None Include="Resources\addic.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\about.png" />
+    <EmbeddedResource Include="Resources\7z.exe" />
+    <None Include="Resources\VersionNode.png" />
+    <None Include="Resources\version.png" />
+    <None Include="Resources\TypeNode.png" />
+    <None Include="Resources\TextNode.png" />
+    <None Include="Resources\StringNode.png" />
+    <None Include="Resources\splash.png" />
+    <None Include="Resources\Save-icon.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\run.png" />
+    <None Include="Resources\RootNode.png" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\rep.png" />
+    <None Include="Resources\refresh.png" />
+    <EmbeddedResource Include="Resources\Rcedit-new.exe" />
+    <EmbeddedResource Include="Resources\RCEDIT.exe" />
+    <None Include="Resources\quit.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\options.png" />
+    <None Include="Resources\open-folder.png" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\MenuNode.png" />
+    <None Include="Resources\manifest.png" />
+    <EmbeddedResource Include="Resources\MainIcon.ico" />
+    <None Include="Resources\ini1.png" />
+    <None Include="Resources\ini.png" />
+    <None Include="Resources\IconNode.png" />
+    <None Include="Resources\HtmlNode.png" />
+    <None Include="Resources\html1.png" />
+    <None Include="Resources\html.png" />
+    <None Include="Resources\font.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\dll.png" />
+    <None Include="Resources\DialogNode.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\defaults.png" />
+    <None Include="Resources\CursorNode.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
