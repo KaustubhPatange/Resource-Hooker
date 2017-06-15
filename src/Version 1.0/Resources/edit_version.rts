@@ -1,0 +1,61 @@
+Sub Main
+  PEFileProxy.PostDebugString "Updating the checksum in the PE file header is enabled."
+  PEFileProxy.UpdateCheckSum = True
+
+  PEFileProxy.PostDebugString "The creation of a backup copy is disabled."
+  PEFileProxy.CreateBackUp = False
+
+  'Set Language to English-US
+  LangID = 0
+
+  'Get and output CodePage to log
+  CP = ScriptUnit.CodePageFromLangID(LangID)
+  PEFileProxy.PostDebugString "CodePage value for English-US: " & CStr(CP)
+
+  PEFileProxy.PostDebugString "Opening the file..."
+  PEFileProxy.OpenFile ".\src\temp.exe"
+
+  if not PEFileProxy.Terminated then
+    if PEFileProxy.HasResources then
+
+      'Set the English-US language for all of the resources in the file.
+      'Note: This is an optional operation. It modifies the language for all of the resources
+      'in the file to one uniform value. Comment it out if you don't need it.
+      ResourcesProxy.SetLanguage LangID, SKIP_IF_EXISTS
+
+      if ResourcesProxy.OpenVersionInfo("1", LangID, CREATE_IF_NOT_EXIST) then
+ 
+       'Set the FileVersion and ProductVersion values using the placeholders specified in the bat file
+        VersionInfoProxy.SetFileVersion %plhd_VerMajor%, %plhd_VerMinor%, 0, 0, LangID, True, True, True
+        VersionInfoProxy.SetProductVersion %plhd_VerMajor%, %plhd_VerMinor%, 0, 0, LangID, True, True, True
+
+       'Modify the existing String File Version Information
+        S1 = "YOURCOMPANYNAME"
+        S2 = "YOURFILEDESCRIPTION"
+        S3 = "YOURINTERNALNAME"
+        S4 = "YOURCOPYRIGHTINFO"
+        S5 = "YOURTRADEMARKSHERE"
+        S6 = "YOURPRODUCTNAME"
+	S7 = "YOURPRODUCTVERSION"
+
+        VersionInfoProxy.EditStringFileInfo "CompanyName", S1, CP, LangID, True, True
+        VersionInfoProxy.EditStringFileInfo "FileDescription", S2, CP, LangID, True, True
+        VersionInfoProxy.EditStringFileInfo "InternalName", S3, CP, LangID, True, True
+        VersionInfoProxy.EditStringFileInfo "LegalCopyright", S4, CP, LangID, True, True
+        VersionInfoProxy.EditStringFileInfo "LegalTrademarks", S5, CP, LangID, True, True
+        VersionInfoProxy.EditStringFileInfo "ProductName", S6, CP, LangID, True, True
+	VersionInfoProxy.EditStringFileInfo "ProductVersion", S7, CP, LangID, True, True
+
+        ResourcesProxy.CloseVersionInfo
+
+      'Save file
+      PEFileProxy.PostDebugString "Saving the file..." 
+      PEFileProxy.SaveAsNewImage ".\release\temp-new.exe"
+      else
+	'Issue a warning in case of error
+        PEFileProxy.PostDebugString "Can't open/create the Version Information..."
+      end if
+    end if
+  end if
+end sub
+

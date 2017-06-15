@@ -1,0 +1,65 @@
+'------------------------------------------------------------------------------
+' Edit Bitmaps: Replace Bitmaps (.BMP) in EXE and DLL Files 
+'------------------------------------------------------------------------------
+'
+' This sample VBScript code provides a real-world example that demonstrates
+' many of the features available in Resource Tuner Console. 
+'
+' This code shows how to modify bitmaps in executables.
+'
+' To give you an idea of how this all works, we made this sample script and
+' test application. When you installed Resorce Tuner Console on your computer,
+' the setup program created the "Demo Scripts" folder under the RTC folder, with 
+' the test application "DemoApp1.exe" in the "Edit Bitmaps\Src" folder. 
+'
+' This script is ready to run. Select EDIT_BITMAPS.BAT file to execute the script.
+'
+' The script will add or replace bitmaps in DemoApp1.exe with bitmaps from .bmp
+' files in the "Src" folder, and output the changes made to the Resource Tree 
+' to a log file. 
+'
+' The resulting files will be created in the directory named "Release"
+' Check the log file to see the Resource Tree built.
+'
+'------------------------------------------------------------------------------
+Sub Main
+  PEFileProxy.PostDebugString "Updating the checksum in the PE file header is enabled." 
+  PEFileProxy.UpdateCheckSum = True 
+
+  PEFileProxy.PostDebugString "The creation of a backup copy is disabled." 
+  PEFileProxy.CreateBackUp = False 
+
+  PEFileProxy.PostDebugString "Opening the file..."
+  PEFileProxy.OpenFile ".\src\temp.exe"
+
+  if (PEFileProxy.Terminated) then
+    'Issue a warning in case of error
+    PEFileProxy.PostDebugString "Fatal error when opening this file."
+  else
+    PEFileProxy.PostDebugString "File opened OK."
+    if (not PEFileProxy.HasResources) then
+      PEFileProxy.PostDebugString "The file contains no resources."
+    else
+      PEFileProxy.PostDebugString "The file contains resources."
+
+      'Set Language to default value
+      LangID = 0
+
+      'Replace the bitmap
+      PEFileProxy.PostDebugString "Changing/adding the bitmap..."
+      ResourcesProxy.ChangeBitmap "ITSABITMAPBRO", LangID, CREATE_IF_NOT_EXIST, ".\src\temp.bmp"
+
+      'Build and output the Resource Tree to log to show the changes made to the resources
+      PEFileProxy.PostDebugString ""
+      PEFileProxy.PostDebugString "Resource Tree built by RTC:"
+      ResourcesProxy.ResourceTreeToLog
+      PEFileProxy.PostDebugString ""
+
+      'Save file
+      PEFileProxy.PostDebugString "Saving the file..."
+      PEFileProxy.SaveAsNewImage ".\release\temp-new.exe"
+    end if
+    PEFileProxy.PostDebugString "Closing this file..."
+    PEFileProxy.CloseFile
+  end if
+end Sub
